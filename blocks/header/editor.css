@@ -1,0 +1,7 @@
+.edit-post-visual-editor__post-title-wrapper,
+#custom-featured-image-meta-box,
+#wps_subtitle_panel,
+.block-editor-post-preview__dropdown,
+.components-panel__row:not([class*="edit"]) {
+    display: none !important;
+}
