@@ -454,6 +454,77 @@ add_action( 'acf/include_fields', function() {
 ) );
 
 	acf_add_local_field_group( array(
+	'key' => 'group_65b2c05080596',
+	'title' => 'Login',
+	'fields' => array(
+		array(
+			'key' => 'field_65b2c05037fe9',
+			'label' => 'Headline',
+			'name' => 'login_headline',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_65b2c06437fea',
+			'label' => 'Description',
+			'name' => 'login_description',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'acfe_textarea_code' => 0,
+			'maxlength' => '',
+			'rows' => '',
+			'placeholder' => '',
+			'new_lines' => 'wpautop',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'login',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+	'acfe_display_title' => '',
+	'acfe_autosync' => '',
+	'acfe_form' => 0,
+	'acfe_meta' => '',
+	'acfe_note' => '',
+) );
+
+	acf_add_local_field_group( array(
 	'key' => 'group_65adb68866304',
 	'title' => 'Footer Options',
 	'fields' => array(
@@ -533,20 +604,27 @@ add_action( 'acf/include_fields', function() {
 
 add_action( 'acf/init', function() {
 	acf_add_options_page( array(
-        'page_title' => 'Connections',
-        'menu_slug' => 'options-social',
-        'parent_slug' => 'options-general.php',
-        'menu_title' => 'Connections',
-        'position' => '',
-        'redirect' => false,
-        'update_button' => 'Save Changes',
-        'updated_message' => 'Saved',
-        'capability' => 'manage_options',
-        'post_id' => 'wp_settings',
-        'autoload' => true,
-    ) );
-} );
+	'page_title' => 'Connections',
+	'menu_slug' => 'options-social',
+	'parent_slug' => 'options-general.php',
+	'menu_title' => 'Connections',
+	'position' => '',
+	'redirect' => false,
+	'update_button' => 'Save Changes',
+	'updated_message' => 'Saved',
+	'capability' => 'manage_options',
+	'post_id' => 'wp_settings',
+	'autoload' => true,
+) );
 
+	acf_add_options_page( array(
+	'page_title' => 'Login',
+	'menu_slug' => 'login',
+	'parent_slug' => 'options-general.php',
+	'position' => '',
+	'redirect' => false,
+) );
+} );
 
 // add location rules
 // Step 1: Add a new location rule type
