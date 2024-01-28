@@ -3,7 +3,7 @@
   "description": "Adds core functionality to the Twenty7 Degrees North headless theme.",
   "main": "none",
   "scripts": {
-    "push": "git add . && git commit -m 'Update' && git push origin main"
+    "push": "git add  && git commit -m 'Update' && git push origin main"
   },
   "repository": {
     "type": "git",
